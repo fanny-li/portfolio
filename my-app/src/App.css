@@ -4,19 +4,26 @@ body {
 }
 
 /* Navbar */
-.container-fluid {
-  font-size: 1.1em;
-}
 
 .navbar {
   margin: 1.2em 2em;
-  /* position: fixed; */
+
 }
+
+.container-fluid {
+  font-size: 1.1em;
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start; */
+}
+
 
 
 #navbarNav {
   display: flex;
   justify-content: flex-end;
+
 }
 
 .nav-item {
@@ -37,20 +44,29 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
-  height: 50vh;
+.sidebar-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   float: left;
   margin: 2.5em;
+
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
 }
 
 .sidebar-item {
   padding: 0.6em;
+
 }
 
-.sidebar a {
+.sidebar-container a {
   text-decoration: none;
   color: inherit;
 }
@@ -109,4 +125,81 @@ body {
   background: linear-gradient(181.46deg, #F89292 49.96%, rgba(200, 100, 247, 0.28) 98.76%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* About Page */
+.grid-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "personal hobbies"
+    "about hobbies";
+  grid-gap: 3em;
+  grid-column-gap: 5em;
+  margin: 3em 6em;
+}
+
+.grid-about-1 {
+  grid-area: personal;
+}
+
+.grid-about-2 {
+  grid-area: hobbies;
+  display: inline-block;
+}
+
+.grid-about-3 {
+  grid-area: about;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subtitle {
+  background: no-repeat 0 100%;
+  background-image: linear-gradient(#FF4444, #920052);
+  background-size: 100% 3px;
+  padding-bottom: 6px;
+  width: fit-content;
+}
+
+.description {
+  padding-top: 10px;
+}
+
+.polaroid {
+  display: inline-block;
+}
+
+.polaroid {
+  background: #FFFFFF;
+  border: 22px solid white;
+  border-bottom: 60px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  margin: 2.5em 0;
+  text-align: center;
+  position: relative;
+}
+
+.polaroid img {
+  display: block;
+}
+
+.img-left {
+  transform: rotate(-10deg);
+  float: left;
+
+}
+
+.img-right {
+  transform: rotate(10deg);
+  float: right;
+}
+
+.caption {
+  text-align: center;
+  /* line-height: 2em; */
 }

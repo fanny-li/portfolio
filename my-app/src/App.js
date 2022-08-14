@@ -5,7 +5,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import aboutme from './components/info/AboutInfo'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
       </div>
       <div className="content">
         <Home />
-        <About />
+        <About
+          description={aboutme.description}
+        />
+        <Experience />
       </div>
     </Router>
   );
