@@ -136,7 +136,7 @@ body {
     "about hobbies";
   grid-gap: 3em;
   grid-column-gap: 5em;
-  margin: 3em 6em;
+  margin: 6em 10em;
 }
 
 .grid-about-1 {
@@ -145,7 +145,6 @@ body {
 
 .grid-about-2 {
   grid-area: hobbies;
-  display: inline-block;
 }
 
 .grid-about-3 {
@@ -159,7 +158,7 @@ body {
 
 .subtitle {
   background: no-repeat 0 100%;
-  background-image: linear-gradient(#FF4444, #920052);
+  background-image: linear-gradient(to left, #FF4444, #920052);
   background-size: 100% 3px;
   padding-bottom: 6px;
   width: fit-content;
@@ -170,7 +169,7 @@ body {
 }
 
 .polaroid {
-  display: inline-block;
+  display: block;
 }
 
 .polaroid {
@@ -185,7 +184,7 @@ body {
 }
 
 .polaroid img {
-  display: block;
+  display: inline-block;
 }
 
 .img-left {
@@ -202,4 +201,34 @@ body {
 .caption {
   text-align: center;
   /* line-height: 2em; */
+}
+
+/* Experience */
+.experience-title {
+  margin: 6em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.experience-title h5 {
+  text-align: center;
+}
+
+.line {
+  background: no-repeat 0 100%;
+  background-image: linear-gradient(to left, #FF4444, #920052);
+  background-size: 100% 3px;
+  padding-bottom: 6px;
+  width: 20vw;
+  height: 1px;
+  align-self: center;
+}
+
+.line-left {
+  justify-self: end;
+}
+
+.line-right {
+  justify-self: start;
 }
