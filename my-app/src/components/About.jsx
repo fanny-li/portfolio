@@ -17,12 +17,11 @@ const About = (props) => {
                 <h5 className="subtitle">hobbies</h5>
                 <div className='polaroid img-left'>
                     <div className="polaroid-img">
-                        <img src={reading} alt="Book" width={'200px'} height={'220px'} title="Reading" />
+                        <img src={reading} alt="Book" width={'200px'} height={'200px'} title="Reading" />
                     </div>
                     <div className='caption'>
                         Reading
                     </div>
-
                 </div>
                 <div className='polaroid img-right'>
                     <div className="polaroid-img">

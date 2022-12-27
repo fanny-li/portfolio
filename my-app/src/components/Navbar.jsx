@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import '/Users/fannyli/Projects/portfolio/my-app/src/App.css'
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg sticky-top">
+        <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
                 <a className="nav-link" href="/">Fanny</a>
                 {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

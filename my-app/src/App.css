@@ -1,13 +1,21 @@
+:root {
+  --primary: #920052;
+  --secondary: #F89292;
+  --body: #FAEAEA;
+}
+
 body {
-  background-color: #FAEAEA;
+  background-color: var(--body);
   font-family: 'Kurale', serif;
 }
 
 /* Navbar */
 
 .navbar {
-  margin: 1.2em 2em;
-
+  margin: 0 2em;
+  background-color: var(--body);
+  top: 0;
+  overflow: hidden;
 }
 
 .container-fluid {
@@ -45,25 +53,23 @@ body {
 
 /* Sidebar */
 .sidebar-container {
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   float: left;
   margin: 2.5em;
-
 }
 
 .sidebar-sticky {
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  position: fixed;
   align-self: flex-start;
-  top: 0;
+  top: 40%;
 }
 
 .sidebar-item {
   padding: 0.6em;
-
 }
 
 .sidebar-container a {
@@ -76,6 +82,7 @@ body {
   display: flex;
   justify-content: center;
   /* align-items: center; */
+  margin-top: 8em;
 }
 
 .home-box1 {
@@ -158,7 +165,7 @@ body {
 
 .subtitle {
   background: no-repeat 0 100%;
-  background-image: linear-gradient(to left, #FF4444, #920052);
+  background-image: linear-gradient(to left, var(--secondary), var(--primary));
   background-size: 100% 3px;
   padding-bottom: 6px;
   width: fit-content;
@@ -168,23 +175,26 @@ body {
   padding-top: 10px;
 }
 
-.polaroid {
-  display: block;
-}
+
 
 .polaroid {
   background: #FFFFFF;
-  border: 22px solid white;
+  border: 20px solid white;
   border-bottom: 60px solid white;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  margin: 2.5em 0;
+  margin: 2em 0;
   text-align: center;
   position: relative;
+  display: inline-block;
 }
 
+
 .polaroid img {
-  display: inline-block;
+  padding: 8px 5px;
+  animation: fadeInAnimation 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .img-left {
@@ -198,15 +208,15 @@ body {
   float: right;
 }
 
+
 .caption {
   text-align: center;
-  /* line-height: 2em; */
 }
 
 /* Experience */
 .experience-title {
-  margin: 6em;
   display: grid;
+  margin-bottom: 4em;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
 }
@@ -215,9 +225,15 @@ body {
   text-align: center;
 }
 
+#experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .line {
   background: no-repeat 0 100%;
-  background-image: linear-gradient(to left, #FF4444, #920052);
+  background-image: linear-gradient(to left, var(--secondary),
+      var(--primary));
   background-size: 100% 3px;
   padding-bottom: 6px;
   width: 20vw;
@@ -226,9 +242,89 @@ body {
 }
 
 .line-left {
+  background-image: linear-gradient(to left, var(--primary),
+      var(--secondary));
   justify-self: end;
 }
 
 .line-right {
   justify-self: start;
+}
+
+/* Professional Experience */
+#timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+#timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+/* Container around content */
+.timeline-item {
+  padding: 0 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 98%;
+  background-color: var(--body);
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, var(--primary), var(--secondary));
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.timeline-left {
+  left: -50%;
+}
+
+/* Place the container to the right */
+.timeline-right {
+  left: 50%;
+}
+
+
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+  left: -11px;
+}
+
+/* The actual content */
+.timeline-info {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Animations */
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
