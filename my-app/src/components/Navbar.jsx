@@ -1,6 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import '/Users/fannyli/Projects/portfolio/my-app/src/App.css'
+import { useState } from 'react';
 function Navbar() {
+
+    const [buttonActive, setButtonActive] = useState(0);
+
+    function handleClick() {
+
+    }
     return (
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
@@ -11,13 +18,13 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink activeclassname="active" to="/" className="nav-link">Home</NavLink>
+                            <a to="/" className="nav-link" href='#root'>Home</a>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeclassname="active" to="/aboutme" className="nav-link">About</NavLink>
+                            <a to="/aboutme" className="nav-link" href="#aboutme">About</a>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeclassname="active" to="/experiences" className="nav-link">Experiences</NavLink>
+                            <a activeclassname="active" to="/experiences" className="nav-link" href='#experience-container'>Experiences</a>
                         </li>
                         <li className="nav-item">
                             <NavLink activeclassname="active" to="/contactme" className="nav-link">Contact Me</NavLink>

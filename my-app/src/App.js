@@ -6,7 +6,6 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import aboutme from './components/info/AboutInfo'
-import profexp from './components/info/ProfExp'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
@@ -24,9 +23,8 @@ function App() {
         <About
           description={aboutme.description}
         />
-        <Experience
-
-        />
+        <Experience />
+        <Contact />
       </div>
     </Router>
   );

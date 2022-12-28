@@ -4,7 +4,7 @@ const Timeline = (props) => {
     const { index, start, end, desc, company } = props;
 
     let timelineStyle = "timeline-item timeline-left";
-    if (index % 2 == 0) {
+    if (index % 2 === 0) {
         timelineStyle = "timeline-item timeline-right";
     }
 

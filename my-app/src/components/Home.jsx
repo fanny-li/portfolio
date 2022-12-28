@@ -1,6 +1,7 @@
 const Home = () => {
     return (
         <section>
+            <div id="root"></div>
             <div className="home">
                 <div className="home-box1">
                 </div>
@@ -16,7 +17,7 @@ const Home = () => {
             <div className="scroll-down">
                 <i class="fa-solid fa-angles-down fa-2x fa-bounce" style={{ '--fa-bounce-rebound': 0 }} aria-hidden="true"></i>
             </div>
-
+            <div id="aboutme"></div>
         </section>
 
 
