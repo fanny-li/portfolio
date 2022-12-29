@@ -324,9 +324,12 @@ body {
 }
 
 /* Contact Me */
+#contactme {
+  height: 5em;
+}
 
 #contact-container {
-  margin: 5em 10em;
+  margin: 0em 10em;
   padding-bottom: 5em;
 }
 
@@ -342,7 +345,7 @@ body {
 
 .contact-grid-top {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-gap: 1em;
 }
 
@@ -360,7 +363,7 @@ body {
   height: 100px;
   background-image: url(images/photocard.png);
   position: relative;
-  left: 65%;
+  left: 80%;
 }
 
 .contact-grid-info {
@@ -382,6 +385,31 @@ textarea {
   resize: none;
 }
 
+/* Footer */
+#footer {
+  text-align: center;
+  margin: 0 3em;
+  padding: 1em 0 3em;
+  border-top: 1px solid black;
+  position: relative;
+}
+
+#footer::before,
+#footer::after {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 5px;
+  width: 5px;
+  background: black;
+  content: "";
+  border-radius: 5px;
+}
+
+#footer::after {
+  right: 0;
+  left: auto;
+}
 
 /* Animations */
 

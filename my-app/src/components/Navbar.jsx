@@ -24,10 +24,10 @@ function Navbar() {
                             <a to="/aboutme" className="nav-link" href="#aboutme">About</a>
                         </li>
                         <li className="nav-item">
-                            <a activeclassname="active" to="/experiences" className="nav-link" href='#experience-container'>Experiences</a>
+                            <a to="/experiences" className="nav-link" href='#experience-container'>Experiences</a>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeclassname="active" to="/contactme" className="nav-link">Contact Me</NavLink>
+                            <a to="/contactme" className="nav-link" href='#contactme'>Contact Me</a>
                         </li>
                     </ul>
                 </div>
