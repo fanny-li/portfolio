@@ -14,28 +14,40 @@ const Contact = () => {
 
     const [modalActive, setModalActive] = useState(false);
 
+    const [canSend, setCanSend] = useState(false);
+
     const handleChange = (event) => {
         setToSend({ ...toSend, [event.target.name]: event.target.value })
     }
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        send(
-            'service_xwqikrd',
-            'template_6shhw9l',
-            toSend,
-            "rvAi4crKU09YPToat"
-        ).then((res) => {
-            console.log("Success!", res.status, res.text);
-        }, (err) => {
-            console.log("Failed.", err);
-        })
 
-        setToSend({
-            name: "",
-            email: "",
-            message: ""
-        });
+        if (toSend.name === "" || toSend.email === "" || toSend.message === "") {
+            setCanSend(false);
+        }
+
+        else {
+            setCanSend(true);
+
+            send(
+                'service_xwqikrd',
+                'template_6shhw9l',
+                toSend,
+                "rvAi4crKU09YPToat"
+            ).then((res) => {
+                console.log("Success!", res.status, res.text);
+            }, (err) => {
+                console.log("Failed.", err);
+            })
+
+            setToSend({
+                name: "",
+                email: "",
+                message: ""
+            });
+        }
 
         setModalActive(true);
 
@@ -57,7 +69,7 @@ const Contact = () => {
                     data-aos-duration="5000"
                     data-aos-delay="300"
                 >
-                    {modalActive ? <ConfirmModal /> : null}
+                    {modalActive ? <ConfirmModal modalMessage={canSend ? "Thank you for reaching out!" : "All fields are required"} /> : null}
                     <div className="contact-grid-top">
                         <div className="contact-grid-left">
                             <label for="message">message</label>

@@ -49,14 +49,13 @@ body {
 }
 
 .nav-item:hover,
-.nav-item:focus {
-  background-size: 100% 3px;
-}
-
-
+.nav-item:focus,
 .active {
+  background-size: 100% 3px;
   color: black;
 }
+
+
 
 /* Sidebar */
 .sidebar-container {
@@ -366,8 +365,9 @@ body {
   width: 100px;
   height: 100px;
   background-image: url(images/photocard.png);
-  position: relative;
-  left: 80%;
+  /* position: relative;
+  left: 80%; */
+  float: right;
 }
 
 .contact-grid-info {
@@ -406,7 +406,7 @@ textarea {
   align-self: center;
   border: 1px solid black;
   border-radius: 5px;
-  animation: fadeInAnimation 3s linear forwards;
+  animation: fadeInAnimation 0.5s linear forwards;
 }
 
 #confirm-modal>div {

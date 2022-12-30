@@ -1,8 +1,8 @@
-const ConfirmModal = () => {
+const ConfirmModal = (props) => {
     return (
         <div id="confirm-modal">
             <div>
-                Thank you for reaching out!
+                {props.modalMessage}
             </div>
         </div>
     )
