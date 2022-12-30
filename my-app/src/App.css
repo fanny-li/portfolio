@@ -394,19 +394,21 @@ textarea {
   position: absolute;
   width: 250px;
   height: 100px;
-  background: linear-gradient(to right, var(--body), rgb(221, 199, 199));
+  /* background: linear-gradient(to right, var(--body), rgb(221, 199, 199)); */
+  background-color: white;
   display: flex;
   justify-self: center;
   justify-content: center;
   align-self: center;
+  border: 1px solid black;
   border-radius: 5px;
-  animation: fadeInAnimation 0.5s linear forwards;
+  animation: fadeInOut 3s linear forwards;
 }
 
 #confirm-modal>div {
   display: flex;
   align-self: center;
-  color: rgb(108, 106, 106);
+  color: black;
 }
 
 /* Footer */
@@ -435,6 +437,7 @@ textarea {
   left: auto;
 }
 
+
 /* Animations */
 
 @keyframes fadeInAnimation {
@@ -443,6 +446,18 @@ textarea {
   }
 
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
     opacity: 1;
   }
 }

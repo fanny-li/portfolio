@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div id="footer">
-            © 2022 Fanny Li
+            fannyli704@gmail.com | © 2022 Fanny Li
         </div>
     )
 }
