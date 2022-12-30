@@ -3,7 +3,10 @@ import bike from '/Users/fannyli/Projects/portfolio/my-app/src/images/bike.jpg'
 const About = (props) => {
     return (
         <div className="grid-about">
-            <div className="grid-about-1">
+            <div className="grid-about-1"
+                data-aos="fade-right"
+                data-aos-easing="ease-in-out"
+            >
                 <h5 className="subtitle">personal information</h5>
                 <div className="grid-info">
                     <p className="description">name: Fanny</p>
@@ -13,9 +16,12 @@ const About = (props) => {
                 </div>
 
             </div>
-            <div className="grid-about-2">
+            <div className="grid-about-2" data-aos="fade-left"
+                data-aos-duration="5000"
+                data-aos-easing="ease-in-out">
                 <h5 className="subtitle">hobbies</h5>
-                <div className='polaroid img-left'>
+                <div className='polaroid img-left'
+                >
                     <div className="polaroid-img">
                         <img src={reading} alt="Book" width={'200px'} height={'200px'} title="Reading" />
                     </div>
@@ -24,6 +30,7 @@ const About = (props) => {
                     </div>
                 </div>
                 <div className='polaroid img-right'>
+
                     <div className="polaroid-img">
                         <img src={bike} alt="Bike" width={'200px'} height={'220px'} />
                     </div>
@@ -33,7 +40,9 @@ const About = (props) => {
                 </div>
 
             </div>
-            <div className="grid-about-3">
+            <div className="grid-about-3" data-aos="fade-right"
+                data-aoos-duration="5000"
+                data-aos-easing="ease-in-out">
                 <h5 className="subtitle">about me</h5>
                 <p className="description">{props.description}</p>
             </div>

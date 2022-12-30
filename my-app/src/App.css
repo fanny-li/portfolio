@@ -143,6 +143,10 @@ body {
 }
 
 /* About Page */
+#aboutme {
+  height: 6em;
+}
+
 .grid-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -151,7 +155,7 @@ body {
     "about hobbies";
   grid-gap: 3em;
   grid-column-gap: 5em;
-  margin: 5em 10em 10em;
+  margin: 0em 10em 10em;
 }
 
 .grid-about-1 {
@@ -402,7 +406,7 @@ textarea {
   align-self: center;
   border: 1px solid black;
   border-radius: 5px;
-  animation: fadeInOut 3s linear forwards;
+  animation: fadeInAnimation 3s linear forwards;
 }
 
 #confirm-modal>div {
@@ -446,18 +450,6 @@ textarea {
   }
 
   100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOut {
-
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
     opacity: 1;
   }
 }

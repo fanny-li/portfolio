@@ -46,12 +46,17 @@ const Contact = () => {
 
     return (
         <section>
-            <div id="contactme"></div>
+            <div id="contactme" ></div>
             <div id="contact-container">
-                <div className="contact-title">
+                <div className="contact-title" data-aos="fade-left"
+                    data-aos-duration="5000"
+                    data-aos-easing="ease-in-out">
                     <h5 className="subtitle">stay in touch!</h5>
                 </div>
-                <div className="contact-grid">
+                <div className="contact-grid" data-aos="zoom-in"
+                    data-aos-duration="5000"
+                    data-aos-delay="300"
+                >
                     {modalActive ? <ConfirmModal /> : null}
                     <div className="contact-grid-top">
                         <div className="contact-grid-left">

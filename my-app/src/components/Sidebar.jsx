@@ -1,4 +1,4 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import resume from "./document/Resume.pdf";
 
 const Sidebar = () => {
     return (
@@ -11,7 +11,8 @@ const Sidebar = () => {
                     <a href="https://github.com/fanny-li" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-square-github fa-xl"></i></a>
                 </div>
                 <div className="sidebar-item">
-                    <i class="fa-solid fa-file fa-xl"></i>
+                    <a href={resume} target="_blank"><i class="fa-solid fa-file fa-xl"></i></a>
+
                 </div>
             </div>
 
