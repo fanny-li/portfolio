@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Navbar = () => {
 
-    const [btn1, setBtn1] = useState(false);
+    const [btn1, setBtn1] = useState(true);
     const [btn2, setBtn2] = useState(false);
     const [btn3, setBtn3] = useState(false);
     const [btn4, setBtn4] = useState(false);
@@ -47,11 +47,11 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container-fluid">
                 <a className="nav-link" href="/">Fanny</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                {/* <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> */}
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <div className="navbar-nav">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
                             <a id="btn1" className={btn1 ? "nav-link active" : "nav-link"} href='#root' onClick={handleClick}>Home</a>
                         </li>
@@ -64,11 +64,10 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a id="btn4" className={btn4 ? "nav-link active" : "nav-link"} href='#contactme' onClick={handleClick}>Contact Me</a>
                         </li>
-                    </div>
+                    </ul>
                 </div>
             </div>
         </nav>
-
     )
 }
 

@@ -19,6 +19,13 @@ const About = (props) => {
             <div className="grid-about-2" data-aos="fade-left"
                 data-aos-duration="5000"
                 data-aos-easing="ease-in-out">
+                <h5 className="subtitle">about me</h5>
+                <p className="description">{props.description}</p>
+            </div>
+            <div className="grid-about-3" data-aos="fade-right"
+                data-aoos-duration="5000"
+                data-aos-easing="ease-in-out">
+
                 <h5 className="subtitle">hobbies</h5>
                 <div className='polaroid img-left'
                 >
@@ -32,19 +39,12 @@ const About = (props) => {
                 <div className='polaroid img-right'>
 
                     <div className="polaroid-img">
-                        <img src={bike} alt="Bike" width={'200px'} height={'220px'} />
+                        <img src={bike} alt="Bike" width={'200px'} height={'200px'} />
                     </div>
                     <div className="caption">
                         Biking
                     </div>
                 </div>
-
-            </div>
-            <div className="grid-about-3" data-aos="fade-right"
-                data-aoos-duration="5000"
-                data-aos-easing="ease-in-out">
-                <h5 className="subtitle">about me</h5>
-                <p className="description">{props.description}</p>
             </div>
         </div>
     )

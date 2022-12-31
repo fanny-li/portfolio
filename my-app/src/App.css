@@ -59,18 +59,12 @@ body {
 
 /* Sidebar */
 .sidebar-container {
-  height: 150vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   float: left;
-  margin: 2.5em;
+  margin: 2em;
 }
 
 .sidebar-sticky {
-  /* position: -webkit-sticky; */
   position: fixed;
-  align-self: flex-start;
   top: 40%;
 }
 
@@ -154,7 +148,7 @@ body {
     "about hobbies";
   grid-gap: 3em;
   grid-column-gap: 5em;
-  margin: 0em 10em 10em;
+  margin: 0em 15% 10em;
 }
 
 .grid-about-1 {
@@ -162,11 +156,11 @@ body {
 }
 
 .grid-about-2 {
-  grid-area: hobbies;
+  grid-area: about;
 }
 
 .grid-about-3 {
-  grid-area: about;
+  grid-area: hobbies;
 }
 
 .grid-info {
@@ -186,8 +180,6 @@ body {
   padding-top: 10px;
 }
 
-
-
 .polaroid {
   background: #FFFFFF;
   border: 20px solid white;
@@ -203,9 +195,6 @@ body {
 
 .polaroid img {
   padding: 8px 5px;
-  animation: fadeInAnimation 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 .img-left {
@@ -222,6 +211,27 @@ body {
 
 .caption {
   text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .grid-about {
+    display: block;
+    overflow: auto;
+
+  }
+
+  .polaroid {
+    display: block;
+    /* position: absolute; */
+  }
+
+  .img-left {
+    transform: rotate(0deg);
+  }
+
+  .img-right {
+    transform: rotate(0deg);
+  }
 }
 
 /* Experience */
@@ -326,6 +336,22 @@ body {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 1000px) {
+  #timeline::after {
+    left: 0px;
+  }
+
+  .timeline-left::after {
+    left: -10px;
+  }
+
+  .timeline-left,
+  .timeline-right {
+    left: 0;
+    margin-bottom: 15px;
+  }
+}
+
 /* Contact Me */
 #contactme {
   height: 5em;
@@ -349,16 +375,21 @@ body {
 .contact-grid-top {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-gap: 1em;
+  grid-template-areas: "left right";
+  grid-gap: 1.5em;
+  color: rgb(139, 118, 118);
 }
 
 .contact-grid-left {
-  border-right: 1px solid black;
+  border-right: 1px solid rgb(139, 118, 118);
+  padding-right: 1em;
+  grid-area: left;
 }
 
 .contact-grid-right {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  grid-area: right;
 }
 
 .postcard-image {
@@ -389,8 +420,13 @@ textarea {
   resize: none;
 }
 
+.icon {
+  color: rgb(139, 118, 118);
+  font-size: 1.2em;
+}
+
 .icon:hover {
-  font-size: larger;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -413,6 +449,25 @@ textarea {
   display: flex;
   align-self: center;
   color: black;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .contact-grid,
+  .contact-grid>* {
+    display: block;
+  }
+
+  .contact-grid-left {
+    border: none;
+    padding-bottom: 2em;
+  }
+
+  .contact-grid-bottom {
+    position: absolute;
+    right: 8%;
+    bottom: 2%;
+  }
 }
 
 /* Footer */

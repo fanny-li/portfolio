@@ -71,24 +71,28 @@ const Contact = () => {
                 >
                     {modalActive ? <ConfirmModal modalMessage={canSend ? "Thank you for reaching out!" : "All fields are required"} /> : null}
                     <div className="contact-grid-top">
-                        <div className="contact-grid-left">
-                            <label for="message">message</label>
-                            <textarea type="textarea" name="message" rows="12" cols="40" onChange={handleChange} value={toSend.message} />
-                        </div>
                         <div className="contact-grid-right">
                             <div className="contact-grid-images">
                                 <div className="postcard-image"></div>
                             </div>
-                            <div className="contact-grid-info">
+                            <div className="contact-grid-info form-outline w-100">
                                 <label for="name">name</label>
-                                <input type="text" name="name" id="name" onChange={handleChange} value={toSend.name} />
+                                <input className="form-control" type="text" name="name" id="name" onChange={handleChange} value={toSend.name} />
                                 <label for="email">email</label>
-                                <input type="text" name="email" id="email" onChange={handleChange} value={toSend.email} />
+                                <input className="form-control" type="text" name="email" id="email" onChange={handleChange} value={toSend.email} />
                             </div>
                         </div>
+
+                        <div className="contact-grid-left form-outline w-80">
+                            <label for="message">message</label>
+                            <textarea className="form-control" type="textarea" name="message" rows="12" onChange={handleChange} value={toSend.message} />
+                        </div>
+
                     </div>
                     <div className="contact-grid-bottom">
-                        <FontAwesomeIcon className="icon" icon={faPaperPlane} onClick={handleSubmit} />
+                        <div>
+                            <FontAwesomeIcon className="icon" icon={faPaperPlane} onClick={handleSubmit} />
+                        </div>
                     </div>
                 </div>
             </div>

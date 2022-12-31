@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="scroll-down">
-                <i class="fa-solid fa-angles-down fa-2x fa-bounce" style={{ '--fa-bounce-rebound': 0 }} aria-hidden="true"></i>
+                <a href="#aboutme"><i class="fa-solid fa-angles-down fa-2x fa-bounce" style={{ '--fa-bounce-rebound': 0 }} aria-hidden="true"></i></a>
             </div>
             <div id="aboutme"></div>
         </section>

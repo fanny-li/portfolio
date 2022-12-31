@@ -1,14 +1,21 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Timeline = (props) => {
     const { index, start, end, desc, company } = props;
 
-    let timelineStyle = "timeline-item timeline-left";
-    let fromSide = "fade-right";
+    let timelineStyle = "timeline-item timeline-right";
+    let fromSide = "fade-left";
 
-    if (index % 2 === 0) {
-        timelineStyle = "timeline-item timeline-right";
-        fromSide = "fade-left";
+    if (index % 2 !== 0) {
+        timelineStyle = "timeline-item timeline-left";
+
+        // console.log(window.innerWidth);
+        // if (window.innerWidth > 1100) {
+        //     console.log(window.innerWidth);
+        fromSide = "fade-right";
+        // }
     }
 
     return (
