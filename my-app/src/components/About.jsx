@@ -22,10 +22,9 @@ const About = (props) => {
                 <h5 className="subtitle">about me</h5>
                 <p className="description">{props.description}</p>
             </div>
-            <div className="grid-about-3" data-aos="fade-right"
-                data-aoos-duration="5000"
-                data-aos-easing="ease-in-out">
-
+            <div className="grid-about-3" data-aos="zoom-in"
+                data-aos-duration="5000"
+                data-aos-easing="ease-in-out" data-aos-delay="400">
                 <h5 className="subtitle">hobbies</h5>
                 <div className='polaroid img-left'
                 >

@@ -44,14 +44,16 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg fixed-top">
+
+        <nav class="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <a className="nav-link" href="/">Fanny</a>
-                {/* <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button> */}
-                <div className="collapse navbar-collapse" id="navbarNav">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
                     <ul className="navbar-nav">
+
                         <li className="nav-item">
                             <a id="btn1" className={btn1 ? "nav-link active" : "nav-link"} href='#root' onClick={handleClick}>Home</a>
                         </li>
@@ -64,6 +66,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a id="btn4" className={btn4 ? "nav-link active" : "nav-link"} href='#contactme' onClick={handleClick}>Contact Me</a>
                         </li>
+
                     </ul>
                 </div>
             </div>

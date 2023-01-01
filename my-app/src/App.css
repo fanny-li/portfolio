@@ -25,19 +25,18 @@ body {
 }
 
 .container-fluid {
-  font-size: 1.1em;
-  /* position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  align-self: flex-start; */
+  font-size: 1em;
 }
 
 
 
-#navbarNav {
+#navbarToggle {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
   display: flex;
   justify-content: flex-end;
-
 }
 
 .nav-item {
@@ -46,6 +45,9 @@ body {
   background-image: linear-gradient(var(--accent), var(--complement));
   background-size: 0% 3px;
   transition: background-size .3s ease;
+  width: fit-content;
+  line-height: 1.2em;
+  display: flex;
 }
 
 .nav-item:hover,
@@ -338,17 +340,22 @@ body {
 
 @media screen and (max-width: 1000px) {
   #timeline::after {
-    left: 0px;
+    left: 6%;
   }
 
   .timeline-left::after {
-    left: -10px;
+    left: 8px;
+  }
+
+  .timeline-right::after {
+    left: 8px;
   }
 
   .timeline-left,
   .timeline-right {
     left: 0;
     margin-bottom: 15px;
+    margin-left: 2%;
   }
 }
 
@@ -358,14 +365,14 @@ body {
 }
 
 #contact-container {
-  margin: 0em 10em;
+  margin: 0em 15%;
   padding-bottom: 5em;
 }
 
 .contact-grid {
   display: grid;
   grid-template-rows: 5fr 1fr;
-  margin: 5em 6em;
+  margin: 5em 0em;
   background-color: white;
   padding: 3em 5em 1em;
   box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.25);
@@ -456,10 +463,12 @@ textarea {
   .contact-grid,
   .contact-grid>* {
     display: block;
+    padding: 5%;
   }
 
   .contact-grid-left {
     border: none;
+    padding-right: 0;
     padding-bottom: 2em;
   }
 

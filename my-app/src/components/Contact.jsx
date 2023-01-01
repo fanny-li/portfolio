@@ -83,7 +83,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="contact-grid-left form-outline w-80">
+                        <div className="contact-grid-left form-outline w-100">
                             <label for="message">message</label>
                             <textarea className="form-control" type="textarea" name="message" rows="12" onChange={handleChange} value={toSend.message} />
                         </div>
